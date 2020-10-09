@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+body {
+    background-color: #252B34;
+    margin: 0;
+}
+header {
+    background-color: ghostwhite;
+    height: 80px;
+}
+.header-container {
+    width: 80%;
+    margin: auto;
+}
+.header-container p {
+    font-family: 'Fredoka One', cursive;
+    margin: 0;
+    padding-top: 15px;
+    font-size: 40px;
+    float: left;
+    cursor: pointer;
+}
+.header-container a {
+    float: right;
+}
+@media screen and (max-width: 600px) {
+    .header-container p {
+      font-size: 30px;
+      padding-top: 20px;
+    }
+    .book-img img {
+        width: 100% !important;
+        max-width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+    }
+    .book-info {
+        height: 6rem !important;
+    }
+    .book-name {
+        font-size: 1.2rem !important;
+        margin: 4px 0 0 0 !important;
+    }
+    .author {
+        font-size: 1rem !important;
+    }
+    .price, .add-to-cart {
+        font-size: 1.2rem !important;
+    }
+  }
+.header-container p span {
+    color: #6dc77a;
+}
+.cart-button {
+    background-color: #6dc77a;
+    border-radius: 28px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 26px;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 17px;
+}
+.cart-count {
+    padding-left: 5px;
+}
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
+.col {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+.row {
+    margin: 0 -5px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .col {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: ghostwhite;
+    margin: 10px 10px 30px;
+}
+.book-img img {
+    width: 24vw;
+    max-width: 100%;
+    height: 24vw;
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+    object-fit: cover;
+}
+.book-info {
+    height: 8vw;
+    position: relative;
+}
+.book-name {
+    text-align: center;
+    margin: 4% 0 0 0;
+    font-size: 1.4vw;
+    color: #6dc77a;
+    font-weight: 700;
+}
+.author {
+    font-size: 1.2vw;
+    text-align: center;
+    margin: 2% 0 0 0;
+    color: #888;
+}
+.price {
+    float: left;
+    position: absolute;
+    bottom: 0.3rem;
+    left: 0.5rem;
+    font-size: 1.4vw;
+    font-weight: 600;
+    color: #888;
+}
+.add-to-cart {
+    float: right;
+    position: absolute;
+    bottom: 0.3rem;
+    right: 0.5rem;
+    font-size: 1.4vw;
+    color: #888;
+}
+.add-to-cart a {
+    color: #6dc77a;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header {
+    padding: 2px 16px;
+    background-color: #6dc77a;
+    color: white;
+}
+.modal-body {
+    padding: 2px 16px;
+}
+.cart-container {
+    width: 60%;
+    margin: auto;
+}
+.cart-head {
+    font-size: 30px;
+    color: ghostwhite;
+    font-weight: 500;
+}
+.cart-section {
+    margin: auto;
+    width: 30%;
+    font-size: 15px;
+    padding-left: 15px;
+    border: none;
+    float: left;
+}
+.cart-element {
+    display: flex;
+    margin-top: 20px;
+}
+.cart-section img {
+    height: auto;
+    max-width: 50%;
+}
+.cart-section p:first-child {
+    font-size: 1.4vw;
+    color: #6dc77a;
+    font-weight: 700;
+}
+.cart-section p:nth-child(2), .cart-section p:last-child {
+    font-size: 1.2vw;
+    color: ghostwhite;
+}
+.cart-section a {
+    font-size: 1vw;
+    color: ghostwhite;
+    font-weight: 400;
+}
+@media screen and (max-width: 600px) {
+    .cart-container {
+        width: 90%;
+        margin: auto;
+    }
+    .cart-section p:first-child {
+        font-size: 0.6rem;
+    }
+    .cart-section p:nth-child(2), .cart-section p:last-child, .cart-section a {
+        font-size: 0.5rem;
+    }
+}
+.form-content {
+    width: 70%;
+    margin: 50px auto;
+}
+.page-head {
+    padding: 40px 0 20px 0;
+    color: ghostwhite;
+}
+.form-labels {
+    margin-top: 20px;
+}
+.form-elements {
+    margin-bottom: 80px;
+}
+input {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+}
+.submit-button {
+    height: 40px;
+    width: 130px;
+    background-color: #6dc77a;
+    color: ghostwhite;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: ghostwhite;
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+td {
+    width: 50%;
+}
