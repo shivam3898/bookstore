@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Ubuntu&display=swap" rel="stylesheet">
     <title>Online Bookstore - Index</title>
 </head>
+
 <body onload="createBookIndex()">
     <header>
         <div class="header-container">
@@ -22,217 +24,14 @@
                     <h2>Description</h2>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-info"> 
+                    <p class="modal-info">
 
                     </p>
                 </div>
             </div>
-          </div>
+        </div>
         <div class="row">
-            <!--<div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img id="imgFile" src="images/alchemist.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">The Alchemist</p>
-                        <p class="author">by Paulo Coelho </p>
-                        <div class="price">
-                            Rs. 150
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/1984.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">1984</p>
-                        <p class="author">by George Orwell </p>
-                        <div class="price">
-                            Rs. 180
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/gatsby.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">The Great Gatsby</p>
-                        <p class="author">by F. Scott Fitzgerald</p>
-                        <div class="price">
-                            Rs. 200
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/oldman.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">The Old Man and the Sea</p>
-                        <p class="author">by Ernest Hemingway </p>
-                        <div class="price">
-                            Rs. 200
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/hobbit.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">The Hobbit There and Back Again</p>
-                        <p class="author">by J.R.R. Tolkien </p>
-                        <div class="price">
-                            Rs. 300
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/orient.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">Murder on the Orient Express</p>
-                        <p class="author">by Agatha Christie </p>
-                        <div class="price">
-                            Rs. 250
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/price.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">The Little Prince</p>
-                        <p class="author">by Antoine de Saint-Exupéry </p>
-                        <div class="price">
-                            Rs. 220
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/meta.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">The Metamorphosis</p>
-                        <p class="author">by Franz Kafka</p>
-                        <div class="price">
-                            Rs. 350
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/sherlock.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">A Study in Scarlet</p>
-                        <p class="author">by Arthur Conan Doyle </p>
-                        <div class="price">
-                            Rs. 350
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/blade.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">Do Androids Dream of Electric Sheep?</p>
-                        <p class="author">by Philip K. Dick</p>
-                        <div class="price">
-                            Rs. 450
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/chess.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">Chess Story</p>
-                        <p class="author">by Stefan Zweig </p>
-                        <div class="price">
-                            Rs. 300
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="book-img">
-                        <img src="images/time.jpg">
-                    </div>
-                    <div class="book-info">
-                        <p class="book-name">The Time Machine</p>
-                        <p class="author">by H.G. Wells </p>
-                        <div class="price">
-                            Rs. 450
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="google.com">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
+
         </div>
     </div>
     <footer>
@@ -240,4 +39,5 @@
     </footer>
     <script src="scripts/bookstore.js"></script>
 </body>
+
 </html>

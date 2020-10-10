@@ -1,27 +1,3 @@
-/*
-*/
-function showModal() {
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementsByClassName("card")[0];
-    var span = document.getElementsByClassName("close")[0];
-    
-    let index = this.getAttribute('data-userIndex');
-    let bookItem = bookDetails[index];
-    document.getElementsByClassName('modal-info')[0].innerText = bookItem.description;
-
-    modal.style.display = "block";
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-}
-
 var bookDetails = [];
 var cart = [];
 
@@ -142,7 +118,7 @@ function createBookIndex() {
 
     let row = document.getElementsByClassName("row")[0];
 
-    bookDetails.forEach(function(item, index) {
+    bookDetails.forEach(function (item, index) {
         let col = document.createElement("div");
         col.setAttribute('class', 'col');
         row.appendChild(col);
@@ -188,15 +164,15 @@ function createBookIndex() {
 function addBooksToCart() {
     if (localStorage.getItem("cart") !== null) {
         let localCart = JSON.parse(localStorage.getItem("cart"));
-        localCart.forEach(function(item) {
+        localCart.forEach(function (item) {
             cart.push(item);
         })
     }
     let cartIndex = this.getAttribute('data-userIndex');
     let bookItem = bookDetails[cartIndex];
     let cartItem = {
-        name : bookItem.name,
-        author: bookItem.author, 
+        name: bookItem.name,
+        author: bookItem.author,
         price: bookItem.price,
         image: bookItem.image
     };
@@ -207,11 +183,33 @@ function addBooksToCart() {
     cart = [];
 }
 
+function showModal() {
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementsByClassName("card")[0];
+    var span = document.getElementsByClassName("close")[0];
+
+    let index = this.getAttribute('data-userIndex');
+    let bookItem = bookDetails[index];
+    document.getElementsByClassName('modal-info')[0].innerText = bookItem.description;
+
+    modal.style.display = "block";
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
 function cartCount() {
     let count = 0;
-    if(localStorage.getItem('cart')!=null) {
+    if (localStorage.getItem('cart') != null) {
         let cartItems = JSON.parse(localStorage.getItem('cart'));
-        cartItems.forEach(function(){
+        cartItems.forEach(function () {
             count++;
         })
     }
@@ -232,7 +230,7 @@ function cartPage() {
     }
     else {
         let localCart = JSON.parse(localStorage.getItem("cart"));
-        localCart.forEach(function(item) {
+        localCart.forEach(function (item) {
             totalPrice += parseFloat(item.price);
             cart.push(item);
         })
@@ -240,7 +238,7 @@ function cartPage() {
         heading.innerText = "Shopping Cart";
         body.appendChild(heading);
 
-        cart.forEach(function(item, index) {
+        cart.forEach(function (item, index) {
             let cartElement = document.createElement('div');
             cartElement.setAttribute('class', 'cart-element');
             body.appendChild(cartElement);
@@ -327,10 +325,10 @@ function addSpace(element) {
 
 function purchase() {
     let cardNumber = document.getElementById('card-number').value;
-    cardNumber = cardNumber.replace(/ /g,'');
+    cardNumber = cardNumber.replace(/ /g, '');
     let isValidCard = validCreditCard(cardNumber);
     let flag = false;
-    if(isValidCard) {
+    if (isValidCard) {
         localStorage.removeItem("cart");
         cart = [];
         flag = true;
@@ -346,19 +344,19 @@ function purchase() {
 
 //Luhn Algo
 function validCreditCard(value) {
-	if (/[^0-9-\s]+/.test(value)) return false;
-	let nCheck = 0, bEven = false;
-	value = value.replace(/\D/g, "");
+    if (/[^0-9-\s]+/.test(value)) return false;
+    let nCheck = 0, bEven = false;
+    value = value.replace(/\D/g, "");
 
-	for (var n = value.length - 1; n >= 0; n--) {
-		var cDigit = value.charAt(n),
-			  nDigit = parseInt(cDigit, 10);
+    for (var n = value.length - 1; n >= 0; n--) {
+        var cDigit = value.charAt(n),
+            nDigit = parseInt(cDigit, 10);
 
-		if (bEven && (nDigit *= 2) > 9) nDigit -= 9;
+        if (bEven && (nDigit *= 2) > 9) nDigit -= 9;
 
-		nCheck += nDigit;
-		bEven = !bEven;
-	}
+        nCheck += nDigit;
+        bEven = !bEven;
+    }
 
-	return (nCheck % 10) == 0;
+    return (nCheck % 10) == 0;
 }
